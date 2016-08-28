@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OnePicDialog</class>
+ <widget class="QDialog" name="OnePicDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1202</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="OpenButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>400</y>
+     <width>161</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>10</y>
+     <width>951</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="Pictures">
+    <item row="0" column="2" rowspan="2">
+     <widget class="QGraphicsView" name="resultView"/>
+    </item>
+    <item row="0" column="0" rowspan="2">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="ProcessButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>490</y>
+     <width>161</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>处理图片</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>191</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="ParameterAdjustment">
+    <item>
+     <widget class="QGroupBox" name="Canny_2">
+      <property name="title">
+       <string>Canny算法参数</string>
+      </property>
+      <layout class="QGridLayout" name="Canny">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Threshold1</string>
+         </property>
+         <property name="buddy">
+          <cstring>CannyThre1Edit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Threshold2</string>
+         </property>
+         <property name="buddy">
+          <cstring>CannyThre2Edit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="CannyThre1Edit"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="CannyThre2Edit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="Threshold_2">
+      <property name="title">
+       <string>二值化算法阈值参数</string>
+      </property>
+      <layout class="QGridLayout" name="Threshold">
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>MaxValue</string>
+         </property>
+         <property name="buddy">
+          <cstring>ThresholdMaxValueEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Threshold</string>
+         </property>
+         <property name="buddy">
+          <cstring>ThreshholdThreEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="ThreshholdThreEdit"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="ThresholdMaxValueEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="HoughLinesP_2">
+      <property name="title">
+       <string>HoughLinesP算法参数</string>
+      </property>
+      <layout class="QGridLayout" name="HoughLinesP">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>MinLineLength</string>
+         </property>
+         <property name="buddy">
+          <cstring>MinLineLengthEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Threshhold</string>
+         </property>
+         <property name="buddy">
+          <cstring>HoughThreEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>MaxLineGap</string>
+         </property>
+         <property name="buddy">
+          <cstring>MaxLineGapEdit</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="HoughThreEdit"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="MinLineLengthEdit"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="MaxLineGapEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>OpenButton</tabstop>
+  <tabstop>CannyThre1Edit</tabstop>
+  <tabstop>CannyThre2Edit</tabstop>
+  <tabstop>ThreshholdThreEdit</tabstop>
+  <tabstop>ThresholdMaxValueEdit</tabstop>
+  <tabstop>HoughThreEdit</tabstop>
+  <tabstop>MinLineLengthEdit</tabstop>
+  <tabstop>MaxLineGapEdit</tabstop>
+  <tabstop>ProcessButton</tabstop>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>resultView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
