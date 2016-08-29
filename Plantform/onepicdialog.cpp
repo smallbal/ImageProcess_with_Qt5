@@ -10,6 +10,16 @@ OnePicDialog::OnePicDialog(QWidget *parent) :
     ui(new Ui::OnePicDialog)
 {
     ui->setupUi(this);
+    //QString temp_show;
+    //在面板上显示初始参数
+    ui->CannyThre1Edit->setText(QString::number(Canny_threshold1));
+    ui->CannyThre2Edit->setText(QString::number(Canny_threshold2));
+    ui->ThresholdThreEdit->setText(QString::number(Threshold_thresh));
+    ui->ThresholdMaxValueEdit->setText(QString::number(Threshold_maxval));
+    ui->HoughThreEdit->setText(QString::number(HoughLinesP_threshold));
+    ui->MinLineLengthEdit->setText(QString::number(HoughLinesP_minLineLength));
+    ui->MaxLineGapEdit->setText(QString::number(HoughLinesP_maxLineGap));
+
 }
 
 OnePicDialog::~OnePicDialog()
@@ -62,6 +72,14 @@ void OnePicDialog::on_ProcessButton_clicked()
     //    native = cv::imread("C:\\Users\\superman\\Desktop\\timg.jpg");
     //    native = QImage2cvMat(*image).clone();
         native = cv::imread(fileName.toStdString());
+        //读取面板参数
+        Canny_threshold1 = ui->CannyThre1Edit->text().toDouble();
+        Canny_threshold2 = ui->CannyThre2Edit->text().toDouble();
+        Threshold_thresh = ui->ThresholdThreEdit->text().toDouble();
+        Threshold_maxval = ui->ThresholdMaxValueEdit->text().toDouble();
+        HoughLinesP_threshold = ui->HoughThreEdit->text().toInt();
+        HoughLinesP_minLineLength = ui->MinLineLengthEdit->text().toDouble();
+        HoughLinesP_maxLineGap = ui->MaxLineGapEdit->text().toDouble();
 
 
 

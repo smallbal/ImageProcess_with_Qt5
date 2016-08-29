@@ -47,7 +47,7 @@ void MultiPicDialog::on_pushButton_clicked()
             natives.push_back(cv::imread(fileNames.at(i).toStdString()));
             qDebug()<<fileNames.at(i)<<"读取成功";
         }
-        qDebug()<<"show pictures";
+        qDebug()<<"容器存图片数量为"<<natives.size();
 
 
         if(images[0])
@@ -68,7 +68,6 @@ void MultiPicDialog::on_pushButton_clicked()
 }
 
 
-static int count_process = 0;
 void MultiPicDialog::on_pushButton_2_clicked()
 {
     cv::Stitcher stitcher = cv::Stitcher::createDefault(false);

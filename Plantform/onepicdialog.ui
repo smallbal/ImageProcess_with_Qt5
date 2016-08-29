@@ -148,12 +148,12 @@
           <string>Threshold</string>
          </property>
          <property name="buddy">
-          <cstring>ThreshholdThreEdit</cstring>
+          <cstring>ThresholdThreEdit</cstring>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="ThreshholdThreEdit"/>
+        <widget class="QLineEdit" name="ThresholdThreEdit"/>
        </item>
        <item row="3" column="1">
         <widget class="QLineEdit" name="ThresholdMaxValueEdit"/>
@@ -216,7 +216,7 @@
   <tabstop>OpenButton</tabstop>
   <tabstop>CannyThre1Edit</tabstop>
   <tabstop>CannyThre2Edit</tabstop>
-  <tabstop>ThreshholdThreEdit</tabstop>
+  <tabstop>ThresholdThreEdit</tabstop>
   <tabstop>ThresholdMaxValueEdit</tabstop>
   <tabstop>HoughThreEdit</tabstop>
   <tabstop>MinLineLengthEdit</tabstop>
